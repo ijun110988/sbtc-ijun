@@ -1,0 +1,51 @@
+# Visual Studio
+.vs/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Compiled binary files
+bin/
+obj/
+
+# NuGet packages
+packages/
+*.nupkg
+
+# Entity Framework Migrations
+Migrations/
+
+# App settings
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+
+# Database files
+*.mdf
+*.ldf
+
+# Publish output
+publish/
+
+# IIS
+IISExpress/
+
+# Rider
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Git ignore overrides
+!.gitignore

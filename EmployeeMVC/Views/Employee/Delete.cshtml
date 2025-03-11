@@ -1,0 +1,8 @@
+@model EmployeeMVC.Models.Employee
+
+<h2>Are you sure you want to delete @Model.fullname?</h2>
+
+<form asp-action="DeleteConfirmed" asp-route-id="@Model.emp_cd" method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

@@ -1,0 +1,36 @@
+@model IEnumerable<EmployeeMVC.Models.Employee>
+
+<h2>Employee List</h2>
+@* <pre>@Json.Serialize(Model)</pre> *@
+<a asp-action="Create" class="btn btn-primary">Create New</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Emp Code</th>
+            <th>Full Name</th>
+            <th>Birth Date</th>
+            <th>Birth Place</th>
+            <th>Last Salary</th>
+            <th>Is Active</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.emp_cd</td>
+                <td>@item.fullname</td>
+                <td>@item.birth_dt?.ToString("yyyy-MM-dd")</td>
+                <td>@item.birth_place</td>
+                <td>@item.last_salary</td>
+                <td>@(item.isactive == true ? "Yes" : "No")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.emp_cd">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.emp_cd">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
