@@ -73,9 +73,9 @@ packages/
 Migrations/
 
 # App settings
-appsettings.json
-appsettings.Development.json
-appsettings.Production.json
+# appsettings.json
+# appsettings.Development.json
+# appsettings.Production.json
 
 # Database files
 *.mdf
